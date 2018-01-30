@@ -1,4 +1,4 @@
-s#include<iostream>
+as#include<iostream>
 #include<fstream>
 #include<string>
 
@@ -25,7 +25,7 @@ void cut(string company)
 
 void rtf(string name, string surname, string dateOfBirth, string position, string dateValid, string part1, string part2)
 {
-    rtfFile.open("pass.rtf");
+    rtfFile.open("result\\pass.rtf");
     rtfFile<<"{\\rtf1\\ansi\\deff0\n{\\colortbl;\\red0\\green0\blue0;\\red255\\green0\\blue0;\\red0\\green255\\blue0;\\red0\\green0\\blue255;}\n";
     rtfFile<<"\\trowd\\clbrdrt\\brdrs\\clbrdrl\\brdrs\\clbrdrb\\brdrs\\clbrdrr\\brdrs \n";
     rtfFile<<"\\cellx6000\\intbl \n";
@@ -40,7 +40,7 @@ void rtf(string name, string surname, string dateOfBirth, string position, strin
 
 void ps(string name, string surname, string dateOfBirth, string position, string dateValid, string part1, string part2)
 {
-    psFile.open("pass.ps");
+    psFile.open("result\\pass.ps");
     psFile<<"%!PS-Adobe-2.0\n\n";
     psFile<<"/Arial-Black findfont 10 scalefont setfont\n0 0 1 setrgbcolor\n70 800 moveto ("<<part1<<") show\n";
     psFile<<"70 785 moveto ("<<part2<<"pass) show\n\n";
@@ -61,7 +61,7 @@ void ps(string name, string surname, string dateOfBirth, string position, string
 
 void html(string name, string surname, string dateOfBirth, string position, string dateValid, string part1, string part2)
 {
-    htmlFile.open("pass.html");
+    htmlFile.open("result\\pass.html");
     htmlFile<<"<html><head><title></title></head>\n";
     htmlFile<<"<body><table border=\"1\" cellpadding=\"1\" cellspacing=\"1\" style=\"width: 500px;\"><tbody><tr><td>\n";
     htmlFile<<"<p align=\"center\"><font color=\"blue\"><b>"<<part1<<"</b></font></p>\n";
